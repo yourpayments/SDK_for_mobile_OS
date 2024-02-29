@@ -61,7 +61,7 @@
 
     NSData *postData = [postString dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://secure.payu.ru/order/alu.php"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://secure.ypmn.ru/order/alu.php"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0f];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:postData];
     

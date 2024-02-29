@@ -130,7 +130,7 @@
   NSData *postData =  [postString dataUsingEncoding:NSUTF8StringEncoding];
 
 
-  NSURL* URL = [NSURL URLWithString:@"https://secure.payu.ru/order/lu.php"];
+  NSURL* URL = [NSURL URLWithString:@"https://secure.ypmn.ru/order/lu.php"];
   NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:URL];
   [request addValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
   [request setHTTPMethod:@"POST"];
