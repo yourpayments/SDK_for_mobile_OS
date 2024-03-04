@@ -30,14 +30,14 @@ import com.payu.payusdk.R;
 import com.payu.payusdk.model.RequestColumns;
 
 /**
- * Класс, используемый для обмена информацией с сервером
+ * пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  */
 @SuppressWarnings("unused")
 public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 		RequestColumns {
 
-	private static final String PAYU_URL = "https://secure.payu.ru";
-	public static final String PAYU_LU_URL = "https://secure.payu.ru/order/lu.php";
+	private static final String PAYU_URL = "https://secure.ypmn.ru";
+	public static final String PAYU_LU_URL = "https://secure.ypmn.ru/order/lu.php";
 
 	static final int POST_POST_ORDER_REQ = 1;
 	private static final String POST_POST_ORDER_URL = "/order/alu.php";
@@ -146,13 +146,13 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	}
 
 	/**
-	 * Посылает данные о заказе по протоколу ALU
+	 * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ALU
 	 * 
 	 * @param data
-	 *            Данные о покупке
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 * @param secretKey
-	 *            Секретный ключ продавца
-	 * @return запрос для выполнения методом {@link AsyncTask#execute}
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ {@link AsyncTask#execute}
 	 */
 	public HttpRequest postOrder(final ALUPurchaseBuilder data,
 			final String secretKey) {
@@ -205,13 +205,13 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	}
 
 	/**
-	 * Посылает уведомление о наличии товара
+	 * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 * 
 	 * @param data
-	 *            Данные о заказе
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 * @param secretKey
-	 *            Секретный ключ продавца
-	 * @return запрос для выполнения методом {@link AsyncTask#execute}
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ {@link AsyncTask#execute}
 	 */
 	public HttpRequest sendDeliveryNotification(final NotificationBuilder data,
 			final String secretKey) {
@@ -267,13 +267,13 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	}
 
 	/**
-	 * Посылает уведомление о возврате денег
+	 * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	 * 
 	 * @param data
-	 *            Данные о заказе
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 * @param secretKey
-	 *            Секретный ключ продавца
-	 * @return запрос для выполнения методом {@link AsyncTask#execute}
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ {@link AsyncTask#execute}
 	 */
 	public HttpRequest sendRefundNotification(final NotificationBuilder data,
 			final String secretKey) {
@@ -329,15 +329,15 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	}
 
 	/**
-	 * Посылает запрос на проверку статуса заказа
+	 * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 * 
 	 * @param merchant
-	 *            Идентификатор продавца
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 * @param orderReference
-	 *            номер заказа в системе
+	 *            пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 * @param secretKey
-	 *            Секретный ключ продавца
-	 * @return запрос для выполнения методом {@link AsyncTask#execute}
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ {@link AsyncTask#execute}
 	 */
 	public HttpRequest checkOrder(final String merchant,
 			final String orderReference, final String secretKey) {
@@ -394,21 +394,21 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	}
 
 	/**
-	 * @return полный текст ответа на запрос к серверу
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	public String getResponseStatus() {
 		return status;
 	}
 
 	/**
-	 * @return подробное сообщение о результате запроса
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	public String getResponseMessage() {
 		return returnMessage;
 	}
 
 	/**
-	 * @return код или статус ответа на запрос
+	 * @return пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	public String getResponse() {
 		return response;
@@ -417,10 +417,10 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	/**
 	 * 
 	 * @param data
-	 *            данные для шифрования
+	 *            пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 * @param secretKey
-	 *            ключ продавца
-	 * @return закодированную ключом строку
+	 *            пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	public static String encodeDataString(String data, String secretKey) {
 
@@ -520,10 +520,10 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 
 	/**
 	 * @param data
-	 *            текст xml-данных
+	 *            пїЅпїЅпїЅпїЅпїЅ xml-пїЅпїЅпїЅпїЅпїЅпїЅ
 	 * @param field
-	 *            тег, значение которого надо найти
-	 * @return значение первого встретившегося тега XML-файла
+	 *            пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ XML-пїЅпїЅпїЅпїЅпїЅ
 	 */
 	private String getXMLFieldValue(String data, String field) {
 
@@ -541,10 +541,10 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	/**
 	 * 
 	 * @param response
-	 *            ответ сервера на запрос
-	 *            {@link HttpRequest#sendDeliveryNotification} или
+	 *            пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	 *            {@link HttpRequest#sendDeliveryNotification} пїЅпїЅпїЅ
 	 *            {@link HttpRequest#sendRefundNotification}
-	 * @return код ответа
+	 * @return пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	private String getNotificationResponseCode(String response) {
 		if (response != null) {
@@ -560,10 +560,10 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	/**
 	 * 
 	 * @param response
-	 *            ответ сервера на запрос
-	 *            {@link HttpRequest#sendDeliveryNotification} или
+	 *            пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	 *            {@link HttpRequest#sendDeliveryNotification} пїЅпїЅпїЅ
 	 *            {@link HttpRequest#sendRefundNotification}
-	 * @return расшифровку кода ответа
+	 * @return пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	private String getNotificationResponseMessage(String response) {
 		if (response != null) {
@@ -595,7 +595,7 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	}
 
 	/**
-	 * Интерфейс, описывающий методы, вызываемые при выполнении запроса
+	 * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	public interface Callback {
 
@@ -643,7 +643,7 @@ public class HttpRequest extends AsyncTask<Void, Boolean, Boolean> implements
 	}
 
 	/**
-	 * Класс ошибки, выкидываемой при выполнении пустого запроса
+	 * пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 */
 	class NoRequestCallbackException extends RuntimeException {
 		private static final long serialVersionUID = 618062735722934925L;
